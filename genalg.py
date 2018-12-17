@@ -13,11 +13,11 @@ size = len(distances)
 def findduplicates(tour):
     missing = []
     seen = []
-    for i in range(0,len(tour)):
+    for i in range(1,len(tour)+1):
         if (i in tour)==False:
             missing.append(i)
     counter = len(missing)
-    for city in range(1,len(tour)):
+    for city in range(0,len(tour)):
         if counter==0:
             break
         if tour[city] in seen:
